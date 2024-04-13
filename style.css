@@ -1,0 +1,98 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+} 
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+body{
+    background-color: black;
+}
+
+#happy, #newyear{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #f6bfea;
+    text-shadow: 0 0 50px #cf6cda;
+    z-index: 1;
+}
+
+#happy:after,#newyear:after{
+    content: attr(data-text);
+    position: absolute;
+    top: 0; 
+    left: 0;
+    z-index: -1;
+    text-align: center;
+    color:#974E9E;
+    filter: blur(30px);
+} 
+
+#happy{
+    top: 30%;
+    left: 50%;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 5vw; 
+    letter-spacing: 1vw;  
+}
+
+#happy:after{
+    font-size: 6vw; 
+}
+
+#happy:before{
+    content:'';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #804286;
+    z-index: -2;
+    opacity: 0.5;
+    filter: blur(5vw); 
+}
+
+#newyear{
+    top: 60%;
+    left: 50%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4vw; 
+    letter-spacing: 1.2vw; 
+}
+
+#newyear:after{
+    font-size: 6vw; 
+}
+
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 768px) {
+    #happy {
+        font-size: 10vw;
+        letter-spacing: 2vw;
+        margin-top: 13%;
+    }
+
+    #happy:after {
+        font-size: 12vw;
+    }
+
+    #happy:before {
+        filter: blur(10px);
+    }
+
+    #newyear {
+        font-size: 8vw;
+        letter-spacing: 2.4vw;
+       
+        
+    }
+
+    #newyear:after {
+        font-size: 12vw;
+    }
+}
